@@ -26,7 +26,7 @@ function toast(el, msg, type){
 
 function sendWebhook(url, content){
   if(!url || url.includes("PUT_YOUR")){
-    throw new Error("حط رابط الويب هوك داخل script.js");
+    throw new Error("https://discordapp.com/api/webhooks/1471201406492082436/PRvBZp3sCeZCPZPPwwaA23wES6V-FXCYP82kHh3sJyIGe6jw2fvIPvN6jdelK4BV4olx");
   }
   return fetch(url, {
     method: "POST",
