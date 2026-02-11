@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>تسجيل بطولة | 1320</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="1320 logo">
+      <div>
+        <div class="title">1320 KHALEEJ RACE 🏁 NEW</div>
+        <span class="sub">BeamNG • Drag Racing • Gulf Community</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a class="chip" href="index.html">الرئيسية</a><a class="chip" href="rules.html">القوانين</a><a class="chip primary" href="tournament.html">البطولة</a><a class="chip" href="team.html">تقديم التيم</a><a class="chip" href="matches.html">المواجهات</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="pagehead">
+  <div class="container">
+    <div class="card">
+      <h2>تسجيل بطولة</h2>
+      <p>عبّي البيانات وبيطلع لك رقم تسجيل تلقائية.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card form">
+      <div class="row">
+        <div class="field">
+          <div class="label">الاسم</div>
+          <input id="name" placeholder="مثال: حمادي">
+        </div>
+        <div class="field">
+          <div class="label">Discord</div>
+          <input id="discord" placeholder="name#0000 أو ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <div class="label">السيارة</div>
+          <input id="car" placeholder="مثال: ETK / Gavril / Cherrier">
+        </div>
+        <div class="field">
+          <div class="label">الموديل/النسخة</div>
+          <input id="model" placeholder="مثال: Bastion / 800-Series">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <div class="label">HP</div>
+          <input id="hp" type="number" min="50" max="5000" placeholder="مثال: 950">
+        </div>
+        <div class="field">
+          <div class="label">الفئة</div>
+          <select id="class">
+            <option value="">اختر</option>
+            <option>Stock</option>
+            <option>Pro</option>
+            <option>Unlimited</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">ملاحظات (اختياري)</div>
+        <textarea id="notes" placeholder="أي شي يفيد المنظم..."></textarea>
+      </div>
+
+      <button class="btn primary" onclick="_krc.registerTournament()">تأكيد التسجيل</button>
+      <div id="tMsg" class="notice" hidden></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="card">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <span>© 1320 KHALEEJ RACE — جميع الحقوق محفوظة</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

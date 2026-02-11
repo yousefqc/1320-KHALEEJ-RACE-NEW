@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>لوحة الإدارة | 1320</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="1320 logo">
+      <div>
+        <div class="title">1320 KHALEEJ RACE 🏁 NEW</div>
+        <span class="sub">BeamNG • Drag Racing • Gulf Community</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a class="chip" href="index.html">الرئيسية</a><a class="chip" href="rules.html">القوانين</a><a class="chip" href="tournament.html">البطولة</a><a class="chip" href="team.html">تقديم التيم</a><a class="chip" href="matches.html">المواجهات</a><a class="chip primary" href="admin.html">لوحة الإدارة</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="pagehead">
+  <div class="container">
+    <div class="card">
+      <h2>لوحة الإدارة</h2>
+      <p>هنا تقدر تشوف المسجلين، تولد مواجهات، وتوافق عليها يدويًا (بدون باك اند).</p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card form">
+      <div style="display:flex; gap:10px; flex-wrap:wrap">
+        <button class="btn" onclick="_krc.loadPlayersAdmin()">تحميل المسجلين</button>
+        <button class="btn primary" onclick="_krc.generateSuggestedMatches(); _krc.loadAllMatchesAdmin();">توليد اقتراحات</button>
+        <button class="btn" onclick="_krc.loadAllMatchesAdmin()">تحميل المواجهات</button>
+      </div>
+      <div id="adMsg" class="notice" hidden></div>
+
+      <h3 class="h2" style="margin-top:16px">إنشاء مواجهة يدويًا + اعتماد</h3>
+      <div class="row">
+        <div class="field">
+          <div class="label">ID المتسابق A</div>
+          <input id="aId" type="number" placeholder="مثال: 1001">
+        </div>
+        <div class="field">
+          <div class="label">ID المتسابق B</div>
+          <input id="bId" type="number" placeholder="مثال: 1002">
+        </div>
+      </div>
+      <button class="btn primary" onclick="_krc.createManualMatch()">إنشاء + اعتماد</button>
+
+      <h3 class="h2" style="margin-top:16px">قائمة المسجلين</h3>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>ID</th><th>الاسم</th><th>Discord</th><th>الفئة</th><th>السيارة</th><th>HP</th>
+            </tr>
+          </thead>
+          <tbody id="playersTable"></tbody>
+        </table>
+      </div>
+
+      <h3 class="h2" style="margin-top:16px">قائمة المواجهات</h3>
+      <div class="tablewrap">
+        <table>
+          <thead>
+            <tr>
+              <th>#</th><th>Match ID</th><th>A</th><th>B</th><th>الفئة</th><th>الحالة/اعتماد</th>
+            </tr>
+          </thead>
+          <tbody id="matchesTable"></tbody>
+        </table>
+      </div>
+
+      <div class="notice">اعتماد المواجهات هنا يحولها إلى <b>approved</b> وتظهر في صفحة المواجهات.</div>
+    </div>
+  </div>
+</section>
+
+<script>
+  setTimeout(()=>{ try{ _krc.loadPlayersAdmin(); _krc.loadAllMatchesAdmin(); }catch(e){} }, 50);
+</script>
+
+<footer class="footer">
+  <div class="container">
+    <div class="card">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <span>© 1320 KHALEEJ RACE — جميع الحقوق محفوظة</span>
+        <span class="badge">Neon UI • HTML/CSS/JS فقط • Webhook</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>

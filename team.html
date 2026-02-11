@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="ar">
+<head>
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>تقديم التيم | 1320</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<header class="header">
+  <div class="container header__inner">
+    <a class="brand" href="index.html">
+      <img src="logo.png" alt="1320 logo">
+      <div>
+        <div class="title">1320 KHALEEJ RACE 🏁 NEW</div>
+        <span class="sub">BeamNG • Drag Racing • Gulf Community</span>
+      </div>
+    </a>
+    <nav class="nav">
+      <a class="chip" href="index.html">الرئيسية</a><a class="chip" href="rules.html">القوانين</a><a class="chip" href="tournament.html">البطولة</a><a class="chip primary" href="team.html">تقديم التيم</a><a class="chip" href="matches.html">المواجهات</a>
+    </nav>
+  </div>
+</header>
+
+
+<section class="pagehead">
+  <div class="container">
+    <div class="card">
+      <h2>تقديم التيم</h2>
+      <p>قدّم كمنظم/مراقب/دعم… ويصل طلبك للإدارة عبر </p>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="card form">
+      <div class="row">
+        <div class="field">
+          <div class="label">الاسم</div>
+          <input id="tname" placeholder="اسمك">
+        </div>
+        <div class="field">
+          <div class="label">Discord</div>
+          <input id="tdiscord" placeholder="name#0000 أو ID">
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <div class="label">الدور المطلوب</div>
+          <select id="role">
+            <option value="">اختر</option>
+            <option>Organizer (منظم)</option>
+            <option>Moderator (مراقب)</option>
+            <option>Support (دعم)</option>
+            <option>Media (ميديا)</option>
+          </select>
+        </div>
+        <div class="field">
+          <div class="label">الدولة/التوقيت</div>
+          <input id="region" placeholder="مثال: الكويت (+3)">
+        </div>
+      </div>
+
+      <div class="field">
+        <div class="label">خبرتك وليش نختارك؟</div>
+        <textarea id="about" placeholder="اكتب خبرتك، تواجدك، وش تقدر تضيف..."></textarea>
+      </div>
+
+      <button class="btn primary" onclick="_krc.applyTeam()">إرسال الطلب</button>
+      <div id="aMsg" class="notice" hidden></div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="card">
+      <div style="display:flex; gap:10px; flex-wrap:wrap; align-items:center; justify-content:space-between">
+        <span>© 1320 KHALEEJ RACE — جميع الحقوق محفوظة</span>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
